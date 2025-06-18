@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(240, 210, 250);
+    margin: 0px;
+    padding: 0px;
+}
+.box{
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    margin: 200px 700px;
+    border-style: solid 1px;
+    border-radius: 15px 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+.box h1{
+    padding: 20px 150px ;
+    color: rgb(190, 11, 245);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.box form div{
+    padding-left: 50px ;
+}
+.box form div input{
+    height: 35px;
+    width: 290px;
+    outline-offset: 1px;
+}
+.box form p{
+    display: flex;
+    justify-content: space-evenly;
+}
+.box form p a{
+    color: rgb(190, 11, 245);
+    padding-top: 15px;
+    text-decoration: none;
+}
+.box form p input{
+    height: 30px;
+    width: 60px;
+    background-color: rgb(190, 11, 245);
+};

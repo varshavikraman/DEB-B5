@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/addCourse.css">
+    <title>Add Course</title>
+</head>
+<body>
+    <nav>
+        <img src="kbalogo.png" alt="logo">
+        <ul>
+            <li><a href="home.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+            <li><a href="addCourse.html">Add Courses</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h3>Add Course</h3>
+            <form>
+                <div>
+                    <label>Course Name:</label><br>
+                    <input type="text" required>
+                </div>
+                <br>
+                <div>
+                    <label>Course Type:</label><br>
+                    <input type="text" required>
+                </div>
+                <br>
+                 <div>
+                    <label>Course Type:</label><br>
+                    <select name="courseType">
+                        <option value="hybrid" selected>Hybrid</option>
+                        <option value="self-paced">Self-Paced</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label>Description:</label><br>
+                    <textarea name="" id="" cols="47" rows="10" placeholder="small description on the course"></textarea>
+                </div>
+                <br>
+                <div>
+                    <label>Price:</label><br>
+                    <select name="price">
+                        <option value="5000" selected>Rs. 5000</option>
+                        <option value="10000">Rs. 10000</option>
+                        <option value="15000">Rs. 15000</option>
+                        <option value="20000">Rs. 20000</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <button type="submit"><a href="home.html">Add Course</a></button>
+                </div>    
+            </form>
+    </div>
+</body>
+</html>

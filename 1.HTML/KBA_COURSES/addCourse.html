@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course</title>
+</head>
+<body bgcolor="pink">
+    <h1 align="center"><font color="violet" size="10">ADD COURSE</font></h1>
+    <form>
+        <table align="center" cellspacing="20">
+            <tr>
+                <td>Course Name:</td>
+                <td><input type="text" placeholder="Enter your Course Name" required></td>    
+            </tr>
+            <tr>
+                <td>Course Id:</td>
+                <td><input type="text" placeholder="Enter your Course Id" required></td>
+            </tr>
+            <tr>
+                <td>Course Type:</td>
+                <td>
+                <select name="courseType">
+                    <option value="course1" selected>Course 1</option>
+                    <option value="course2">Course 2</option>
+                    <option value="course3">Course 3</option>
+                    <option value="course4">Course 4</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td>
+                    <textarea rows="10" cols="30" placeholder="Enter min 200 characters" required></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td>
+                    <select name="Price">
+                        <option value="1" selected>1000/-</option>
+                        <option value="2">2000/-</option>
+                        <option value="3">3000/-</option>
+                        <option value="4">4000/-</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Education:</td>
+                <td>
+                    <input type="checkbox" value="UG">UG
+                    <input type="checkbox" value="PG">PG
+                </td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" value="male" name="Gender">Male
+                    <input type="radio" value="female" name="Gender">Female
+                    <input type="radio" value="other" name="Gender">Other
+                </td>
+            </tr>
+            <tr> 
+                <td>Email:</td>
+                <td>
+                    <input type="email" placeholder="Enter your Email Id" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input type="password" placeholder="Enter your password" required>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    
+                    <input type="submit" value="Add Course">
+                    <input type="reset" value="Reset">
+                </td>
+                
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

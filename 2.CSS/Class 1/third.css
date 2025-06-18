@@ -1,0 +1,14 @@
+ body{
+            background-color: antiquewhite;
+        }
+        .box{
+            height: 150px;
+            width: 500px;
+            border-style: solid;
+            background-color: blueviolet;
+            margin:100px 120px ;
+            padding: 15px 10px;
+            outline-style: solid;
+            outline-width: 20px;
+            outline-color: aquamarine;
+        }

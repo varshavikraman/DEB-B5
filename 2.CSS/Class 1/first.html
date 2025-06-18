@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling using CSS</title>
+    <style>
+        h2{
+            color: brown;
+            background-color: rgb(204, 157, 157);
+            text-align: right;
+            text-decoration:underline;
+            font-style: italic;
+        }
+        .first{
+            color: rgb(77, 19, 235);
+            background-color: rgb(218, 219, 170);
+            font-weight: bolder;
+            font-size: xx-large;
+            text-decoration-line: line-through;
+            text-align: left;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .app{
+            list-style-type: none;
+            display: flex;
+            justify-content: end;
+        }
+        .app li{
+            padding: 10px;
+        }
+        .app li a{
+            text-decoration: none;
+            font-size: large;
+            color: black;
+        }
+        .app li a:hover{
+            background-color: aquamarine;
+            font-size: x-large;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: rgb(3, 119, 119); background-color: rgb(148, 187, 132); text-align: center;text-decoration: underline;font-family: Arial, Helvetica, sans-serif; font-size: x-large;">Welcome to CSS</h1>
+    <h2>Welcome To CSS</h2>
+    <p class="first">Welcome To CSS</p>
+    <nav>
+        <ul class="app">
+            <li><a href="">About</a></li>
+            <li><a href="">Courses</a></li>
+            <li><a href="">Contact US</a></li>
+            <li><a href="">Logout</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

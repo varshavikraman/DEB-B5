@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/issue.css">
+    <title>Issue Certificate</title>
+</head>
+<body>
+     <nav>
+        <img src="/1.HTML/CERITAPP/online-course.png" alt="logo">
+        <ul>
+            <li><a href="frontpage.html">Home</a></li>
+            <li><a href="issuseCerti.html">Issue Certificate</a></li>
+        </ul>
+    </nav>
+    <h1>CertifyMe</h1>
+    <div class="container">
+        <h3>Issue New Certificate</h3>
+            <form>
+                <div>
+                    <label>Select Course*</label><br>
+                    <select name="Course">
+                        <option value="CBA" selected>Certificate Blockchain Associate</option>
+                        <option value="DEB">Developer Essentials for Blockchain</option>
+                        <option value="CED">Certified Ethereum Developer</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Certificate ID*</label><br>
+                    <input type="text" placeholder="Certificate ID" required>
+                </div>
+                 <div>
+                    <label>Candidate Name*</label><br>
+                    <input type="text" placeholder="Candidate Name" required>
+                </div>
+                <div>
+                    <label>Select Grade*</label><br>
+                        <select name="course">
+                            <option value="s" selected>S</option>
+                            <option value="a">A</option>
+                            <option value="b">B</option>
+                        </select>
+                </div>
+                <div>
+                    <label>Issue Date*</label><br>
+                    <input type="date" required>
+                </div>
+                <div>
+                    <button type="submit"><a href="viewCertificate.html">Issue Certificate</a></button>
+                </div>    
+            </form>
+    </div>
+</body>
+</html>
