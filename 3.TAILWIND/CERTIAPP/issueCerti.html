@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Certificate</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-100">
+    <nav class="bg-yellow-500 h-16 flex justify-between shadow-md shadow-yellow-900 ">
+        <img src="/1.HTML/CERITAPP/online-course.png" alt="logo" class="h-16 p-2">
+        <div class="flex items-center space-x-6 mr-6 text-white">
+            <a href="frontPage.html" class="hover:bg-yellow-300 p-4">Home</a>
+            <a href="issueCerti.html" class="hover:bg-yellow-300 p-4">Issue Certificate</a>
+            <a href="login.html" class="hover:bg-yellow-300 p-4">Logout</a>
+        </div>
+    </nav>
+    <div class="bg-white h-[650px] w-[550px] mx-auto mt-28 rounded-xl shadow-lg shadow-slate-300">
+        <h3 class="text-blue-600 text-3xl font-semibold text-center py-8">Issue New Certificate</h3>
+            <form>
+                <div class="pl-16 flex flex-col gap-y-2">
+                    <label class="font-medium text-md">Select Course*</label>
+                    <select name="Course" class="border-gray-300 outline outline-gray-400 focus:border-2 border-gray-700 focus:outline-black w-[420px] h-9 rounded-md">
+                        <option value="CBA" selected>Certificate Blockchain Associate</option>
+                        <option value="DEB">Developer Essentials for Blockchain</option>
+                        <option value="CED">Certified Ethereum Developer</option>
+                    </select>
+                </div>
+                <div class="pt-5 pl-16 flex flex-col gap-y-2">
+                    <label class="font-medium text-md">Certificate ID*</label>
+                    <input type="text" placeholder="Certificate ID" required class="border-gray-300 outline outline-gray-400 focus:border-2 border-gray-700 focus:outline-black w-[420px] h-9 rounded-md">
+                </div>
+                 <div class="pt-5 pl-16 flex flex-col gap-y-2">
+                    <label class="font-medium text-md">Candidate Name*</label>
+                    <input type="text" placeholder="Candidate Name" required class="border-gray-300 outline outline-gray-400 focus:border-2 border-gray-700 focus:outline-black w-[420px] h-9 rounded-md">
+                </div>
+                <div class="pt-5 pl-16 flex flex-col gap-y-2">
+                    <label class="font-medium text-md">Select Grade*</label>
+                        <select name="course" class="border-gray-300 outline outline-gray-400 focus:border-2 border-gray-700 focus:outline-black w-[420px] h-9 rounded-md">
+                            <option value="s" selected>S</option>
+                            <option value="a">A</option>
+                            <option value="b">B</option>
+                        </select>
+                </div>
+                <div class="pt-5 pl-16 flex flex-col gap-y-2">
+                    <label class="font-medium text-md">Issue Date*</label>
+                    <input type="date" required class="border-gray-300 outline outline-gray-400 focus:border-2 border-gray-700 focus:outline-black w-[420px] h-9 rounded-md">
+                </div>
+                <div class="px-16 pt-10">
+                    <button type="submit" class="h-10 w-48 ml-32 bg-blue-600 hover:bg-blue-800 rounded-md"><a href="viewCerti.html" class="text-white font-medium">Issue Certificate</a></button>
+                </div>    
+            </form>
+    </div>
+</body>
+</html>
