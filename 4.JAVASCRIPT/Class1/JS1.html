@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <p id="text"></p>
+    <div>
+        <p id="about1"></p>
+        <p id="about2"></p>
+        <p id="about3"></p>
+    </div>
+     <div>
+        <p>My name is <span id="a1"></span></p>
+        <p>I am from <span id="a2"></span></p>
+        <p>I am currently pursing <span id="a3"></span></p>
+    </div>
+    <script>
+        console.log('JavaScript');
+        console.log('Sum of 5+3 = ',5+3)
+        
+        document.write('Hello World')
+        document.write('<br>5+3 = ',5+3)
+        document.getElementById('text').innerHTML='This section is about DOM'
+        document.getElementById('about1').innerHTML="My name is Varsha Vikraman"
+        document.getElementById('about2').innerHTML="I am from Trivandrum"
+        document.getElementById('about3').innerHTML="I am currently pursing Blockchain"
+        document.getElementById('a1').textContent="Varsha Vikraman"
+        document.getElementById('a2').textContent="Trivandrum"
+        document.getElementById('a3').textContent="Blockchain"
+
+        
+    </script>
+</body>
+</html>
