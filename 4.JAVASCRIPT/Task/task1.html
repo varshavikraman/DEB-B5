@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <div>
+        <h3> document.getElementbyId</h3>
+    <div>
+        <p id="Result1"></p>
+        <p id="Result2"></p>
+        <p id="Result3"></p>
+        <p id="Result4"></p>
+    </div>
+    <div>
+        <p id="Pattern1"></p>
+        <p id="Pattern2"></p>
+        <p id="Pattern3"></p>
+    </div>
+    <div>
+        <p id="Program1"></p>
+        <p id="Program2"></p>
+        <p id="Program3"></p>
+        <p id="Program4"></p>
+        <p id="Program5"></p>
+        <p id="Program6"></p>
+        <p id="Program7"></p>
+        <p id="Program8"></p>
+        <p id="Program9"></p>
+        <p id="Program10"></p>
+    </div>
+    </div>
+    <script>
+        // Print Result
+        document.write('Print Result using document.write<br><br>');
+        document.write('2+5 = ',2+5);
+        console.log('2+5 = ',2+5);
+        document.getElementById('Result1').innerHTML='2+5 = ' +(2 + 5);
+        
+        document.write('<br>5*10 = ',5*10);
+        console.log('5*10 = ',5*10);
+        document.getElementById('Result2').innerHTML='5*10 = ' +(5*10);
+        
+        document.write('<br>(26*3)+4 = ',(26*3)+4);
+        console.log('(26*3)+4 = ',(26*3)+4);
+        document.getElementById('Result3').innerHTML='(26*3)+4 = ' +((26*3)+4);
+        
+        document.write('<br>56/5 = ',56/5);
+        console.log('56/5 = ',56/5);
+        document.getElementById('Result4').innerHTML='56/5 = ' +(56/5);
+
+        //Print Pattern
+        document.write('<br><br>Print Pattern using document.write<br>');
+        document.write('<br><br>*<br>**<br>***');
+        console.log("*\n**\n***");
+        document.getElementById('Pattern1').innerHTML='<br><br>*<br>**<br>***';
+
+        document.write('<br><br>&nbsp&nbsp&nbsp*<br>&nbsp&nbsp**<br>***');
+        console.log('  *\n **\n***');
+        document.getElementById('Pattern2').innerHTML='<br><br>&nbsp&nbsp&nbsp*<br>&nbsp&nbsp**<br>***'
+            
+        document.write('<br><br>1<br>12<br>123');
+        console.log("1\n12\n123");
+        document.getElementById('Pattern3').innerHTML='<br><br>1<br>12<br>123';
+        
+
+        document.write('<br><br>Program using document.write');
+        //Program to find 3+4-1
+        {
+            let a = 3;
+            let b = 4;
+            let c = 1;
+            sum = a+b;
+            result = sum-c;
+            document.write('<br><br>(3+4-1)+4 = ',result)
+            console.log('(26*3)+4 = ',result);
+            document.getElementById('Program1').innerHTML='(3+4-1)+4 = '+result;
+        }
+        //Program to find (3*5)+1
+        {
+            let a = 3;
+            let b = 5;
+            let c = 1;
+            pdt = a*b;
+            result = pdt+c;
+            document.write('<br>(3*5)+1 = ',result)
+            console.log('(3*5)+1 = ',result);
+            document.getElementById('Program2').innerHTML='(3*5)+1 = '+result;
+        }
+        //Program to find (5*2)/2
+        {
+            let a = 5;
+            let b = 2;
+            let c = 2;
+            pdt = a*b;
+            result = pdt/c;
+            document.write('<br>(5*2)/2 = ',result)
+            console.log('(5*2)/2 = ',result);
+            document.getElementById('Program3').innerHTML='(5*2)/2 = '+result;
+        }
+        //Program to find 10*2+3-1
+        {
+            let a = 10;
+            let b = 2;
+            let c = 3;
+            let d = 1;
+            pdt = a*b;
+            sum = pdt+c
+            result = sum-1;
+            document.write('<br>10*2+3-1 = ',result)
+            console.log('10*2+3-1 = ',result);
+            document.getElementById('Program4').innerHTML='10*2+3-1 = '+result;
+        }
+        // Program to find 10%2
+        {
+            let a = 10;
+            let b = 2;
+            result = a%b;
+            document.write('<br>10%2 = ',result)
+            console.log('10%2 = ',result);
+            document.getElementById('Program5').innerHTML='10%2 = '+result; 
+        }
+        //Program to find 17%2
+        {
+            let a = 17;
+            let b = 2;
+            result = a%b;
+            document.write('<br>17%2 = ',result)
+            console.log('17%2 = ',result);
+            document.getElementById('Program6').innerHTML='17%2 = '+result;
+        }
+        //Program to find (5*6)%4
+        {
+            let a = 5;
+            let b = 6;
+            let c = 4;
+            pdt = a*b;
+            result = pdt%c;
+            document.write('<br>(5*6)%4 = ',result)
+            console.log('(5*6)%4 = ',result);
+            document.getElementById('Program7').innerHTML='(5*6)%4 = '+result;
+        }
+        //Program to find 3.5+2.4
+        {
+            let a = 3.5;
+            let b = 2.4;
+            result = a+b;
+            document.write('<br>3.5+2.4 = ',result)
+            console.log('3.5+2.4 = ',result);
+            document.getElementById('Program8').innerHTML='3.5+2.4 = '+result;
+        }
+        //Program to find 104.5/5
+        {
+            let a = 104.5;
+            let b = 5;
+            result = a/b;
+            document.write('<br>104.5/5 = ',result)
+            console.log('104.5/5 = ',result);
+            document.getElementById('Program9').innerHTML='104.5/5 = '+result;
+        }
+        //Program to find 4.5*2
+        {
+            let a = 4.5;
+            let b = 2;
+            result = a*b;
+            document.write('<br>4.5*2 = ',result)
+            console.log('4.5*2 = ',result);
+            document.getElementById('Program10').innerHTML='4.5*2 = '+result;
+        }
+    </script>
+</body>
+</html>
