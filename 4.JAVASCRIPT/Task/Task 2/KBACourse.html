@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course</title>
+    <style>
+        .column{
+            width: 30%;
+            float: left;
+            padding-left: 5px;
+            border-left: 3px solid rgb(197, 230, 13);
+            
+        }
+        .column img{
+            padding-left: 50px;
+        }
+        .column img:hover{
+            opacity: 0.5;
+        }
+        .column p{
+            text-align: center;
+            line-height: 25px;
+        }
+        .course{
+           text-align: center; 
+           padding-top: 2px;
+        }
+        @media only screen and (max-width:900px) {
+            .column{
+                width: 100%;
+
+            }
+            .column img{
+                padding-left: 250px;
+            }
+        }
+         @media only screen and (max-width:600px){
+            .column{
+                width: 100%;
+            }
+            .column img{
+                padding-left: 100px;
+            }
+         }
+          @media only screen and (max-width:400px){
+            .column{
+                width: 100%;
+            }
+            .column img{
+                padding-left: 10px;
+            }
+         }
+    </style>
+</head>
+<body>
+    <h1>Courses</h1>
+    <div class="column">
+        <img src="/2.CSS/Class 2/DEB.jpeg" alt="Course" height="200px" width="400px">
+        <p><span style="font-family: Arial, Helvetica, sans-serif; font-size: larger;font-weight: bold;">Developer Essentials for Blockchain </span><br> <span style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Strong programming skills in at least one popular language, such as Java or Python. Knowledge of cryptography and data structures (like linked lists and arrays). Good understanding of networking concepts (like TCP/IP and DNS) and how it works.</span></p>
+        <div class="course" id="Course1"></div>
+    </div>
+    <div class="column">
+        <img src="/2.CSS/Class 2/CBA.jpeg" alt="Course" height="200px" width="400px">
+        <p><span style="font-family: Arial, Helvetica, sans-serif; font-size: larger;font-weight: bold; text-align: center;">Certified Blockchain Architect</span><br><span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">To become a successful Blockchain architect, you need to have a strong understanding of Blockchain technology, cryptography, distributed systems, smart contracts. You must also master programming languages like Solidity and Java.</span></p>
+        <div class="course" id="Course2"></div>
+    </div>
+    <div class="column">
+        <img src="/2.CSS/Class 2/CED.jpeg" alt="Course" height="200px" width="400px">
+        <p><span style="font-family: Arial, Helvetica, sans-serif; font-size: larger;font-weight: bold;">Certified Ethereum Developer</span><br> <span style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">To become an Ethereum developer, start by grasping blockchain fundamentals and diving into Ethereum specifics. Develop proficiency in key programming languages, including Solidity, JavaScript, and Python. Create, deploy, and experiment with smart contracts using tools like Remix and Truffle.</span></p>
+        <div class="course" id="Course3"></div>
+    </div>
+    <script>
+       { // course 1
+        const experience=document.getElementById("Course1");
+
+        const title = document.createElement('label');
+        title.textContent='Your Experience on the above Course:';
+        title.style.fontSize='15px';
+        title.style.fontFamily='Arial, Helvetica, sans-serif'
+        title.style.fontWeight='600';
+        experience.appendChild(title);
+
+        experience.appendChild(document.createElement('br'));
+
+        const radio1= document.createElement('input');
+        radio1.type= 'radio';
+        radio1.name= 'experience';
+        radio1.value= 'good';
+        experience.appendChild(radio1);
+
+        const label1 =document.createElement('label');
+        label1.textContent= ' Good';
+        experience.appendChild(label1);
+
+        const radio2=document.createElement('input');
+        radio2.type='radio';
+        radio2.name="experience";
+        radio2.value='bad';
+        experience.appendChild(radio2);
+
+        const label2=document.createElement('label');
+        label2.textContent='Bad'
+        experience.appendChild(label2)
+
+        const radio3=document.createElement('input');
+        radio3.type='radio';
+        radio3.name="experience";
+        radio3.value='average';
+        experience.appendChild(radio3);
+
+        const label3=document.createElement('label');
+        label3.textContent='Average'
+        experience.appendChild(label3)
+       }
+        {// course 2
+        const experience=document.getElementById("Course2");
+
+        const title = document.createElement('label');
+        title.textContent='Your Experience on the above Course:';
+        title.style.fontSize='15px';
+        title.style.fontFamily='Arial, Helvetica, sans-serif'
+        title.style.fontWeight='600';
+        experience.appendChild(title);
+
+        experience.appendChild(document.createElement('br'));
+
+        const radio1= document.createElement('input');
+        radio1.type= 'radio';
+        radio1.name= 'experience';
+        radio1.value= 'good';
+        experience.appendChild(radio1);
+
+        const label1 =document.createElement('label');
+        label1.textContent= ' Good';
+        experience.appendChild(label1);
+
+        const radio2=document.createElement('input');
+        radio2.type='radio';
+        radio2.name="experience";
+        radio2.value='bad';
+        experience.appendChild(radio2);
+
+        const label2=document.createElement('label');
+        label2.textContent='Bad'
+        experience.appendChild(label2)
+
+        const radio3=document.createElement('input');
+        radio3.type='radio';
+        radio3.name="experience";
+        radio3.value='average';
+        experience.appendChild(radio3);
+
+        const label3=document.createElement('label');
+        label3.textContent='Average'
+        experience.appendChild(label3)
+        }
+        {// course 3
+        const experience=document.getElementById("Course3");
+
+        const title = document.createElement('label');
+        title.textContent='Your Experience on the above Course:';
+        title.style.fontSize='15px';
+        title.style.fontFamily='Arial, Helvetica, sans-serif'
+        title.style.fontWeight='600';
+        experience.appendChild(title);
+
+        experience.appendChild(document.createElement('br'));
+
+        const radio1= document.createElement('input');
+        radio1.type= 'radio';
+        radio1.name= 'experience';
+        radio1.value= 'good';
+        experience.appendChild(radio1);
+
+        const label1 =document.createElement('label');
+        label1.textContent= ' Good';
+        experience.appendChild(label1);
+
+        const radio2=document.createElement('input');
+        radio2.type='radio';
+        radio2.name="experience";
+        radio2.value='bad';
+        experience.appendChild(radio2);
+
+        const label2=document.createElement('label');
+        label2.textContent='Bad'
+        experience.appendChild(label2)
+
+        const radio3=document.createElement('input');
+        radio3.type='radio';
+        radio3.name="experience";
+        radio3.value='average';
+        experience.appendChild(radio3);
+
+        const label3=document.createElement('label');
+        label3.textContent='Average'
+        experience.appendChild(label3)
+        }
+    </script>
+</body>
+</html>

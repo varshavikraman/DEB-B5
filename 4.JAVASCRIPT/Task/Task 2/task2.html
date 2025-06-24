@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+    <div id="me"></div>
+    <div id="cinema"></div>
+    <div id="programming"></div>
+    <div id="cake"></div>
+    <script>
+        //Program to print a para about yourself using createElement() , textContent & append child.
+        const about_h = document.createElement('h1');
+        about_h.style.color='green';
+        about_h.textContent='About Me';
+
+        const about = document.getElementById('me');
+        about.appendChild(about_h);
+
+        const about_p= document.createElement('p');
+        about_p.textContent="My name is Varsha Vikraman. I am Trivandrum.I am currently learning PG Diploma in Blockchain Technology from Kerala Blockchain Academy under Digital University Kerala.";
+        about.appendChild(about_p);
+
+        // Make an unordered list of cinemas on html page using javascript.
+        const cinema_h = document.createElement('h1');
+        cinema_h.style.color='red';
+        cinema_h.textContent='List of Cinemas';
+
+        const cinemas = document.getElementById('cinema');
+        cinemas.appendChild(cinema_h);
+
+        const cinema_ul = document.createElement('ul');
+        cinema_ul.style.paddingLeft = '50px';
+        
+        const cinema1=document.createElement('li');
+        cinema1.textContent='Thudarum';
+        cinema_ul.appendChild(cinema1);
+
+        const cinema2 =document.createElement('li');
+        cinema2.textContent='Rekhachithram';
+        cinema_ul.appendChild(cinema2);
+
+        const cinema3 = document.createElement('li');
+        cinema3.textContent='Officer on Duty';
+        cinema_ul.appendChild(cinema3);
+
+        const cinema4=document.createElement('li');
+        cinema4.textContent='L2: Empuraan';
+        cinema_ul.appendChild(cinema4);
+
+        const cinema5 = document.createElement('li');
+        cinema5.textContent='Maranamass';
+        cinema_ul.appendChild(cinema5);
+
+        const cinema6=document.createElement('li');
+        cinema6.textContent='Padakkalam';
+        cinema_ul.appendChild(cinema6);
+
+        cinemas.appendChild(cinema_ul);
+
+        //Create a dropdown for programming language classes offered on html page using javascript.
+        const programming_h=document.createElement('h1');
+        programming_h.style.color='blue';
+        programming_h.innerHTML='Programming Language classes offered';
+
+        const language=document.getElementById('programming');
+        language.appendChild(programming_h);
+
+        const PL_h=document.createElement('label');
+        PL_h.textContent='Select Programming Language : ';
+        PL_h.style.fontWeight = 'bold';
+        PL_h.style.fontSize = '20px';
+        language.appendChild(PL_h);
+
+        const PL = document.createElement('select');
+
+        const PL1 = document.createElement('option');
+        PL1.innerHTML='C';
+        PL.appendChild(PL1);
+
+        const PL2=document.createElement('option');
+        PL2.innerHTML='C++';
+        PL.appendChild(PL2);
+
+        const PL3 = document.createElement('option');
+        PL3.innerHTML='JavaScript';
+        PL.appendChild(PL3);
+
+        const PL4=document.createElement('option');
+        PL4.innerHTML='Python';
+        PL.appendChild(PL4);
+
+        language.appendChild(PL);
+
+        //Create a dropdown for list of cakes and print the value of second option.
+        const cake_h=document.createElement('h1');
+        cake_h.style.color='yellow';
+        cake_h.innerHTML='List of Cakes availiable:';
+
+        const cakes=document.getElementById('cake');
+        cakes.appendChild(cake_h)
+
+        const option_h=document.createElement('label');
+        option_h.textContent='Select Programming Language : ';
+        option_h.style.fontWeight = 'bold';
+        option_h.style.fontSize = '20px';
+        cakes.appendChild(option_h);
+
+        const cakeOption = document.createElement('select');
+
+        const optionA = document.createElement('option');
+        optionA.innerHTML='Blackforest Cake';
+        optionA.value = 'Blackforest Cake';
+        cakeOption.appendChild(optionA);
+
+        const optionB = document.createElement('option');
+        optionB.innerHTML='Whiteforest Cake';
+        optionB.value = 'Whiteforest Cake';
+        cakeOption.appendChild(optionB);
+
+        const optionC = document.createElement('option');
+        optionC.innerHTML='RedVelet Cake';
+        optionC.value = 'RedVelet Cake';
+        cakeOption.appendChild(optionC);
+
+        const optionD = document.createElement('option');
+        optionD.innerHTML='CheeseCake';
+        optionD.value = 'Cheese Cake';
+        cakeOption.appendChild(optionD);
+
+        const optionE = document.createElement('option');
+        optionE.innerHTML='Russian Honey Cake';
+        optionE.value = 'Russian Honey Cake';
+        cakeOption.appendChild(optionE);
+
+        cakes.appendChild(cakeOption);
+        console.log(cakeOption.options[1].value);
+
+        //Print your full name storing fname & lname. Print in Uppercase.
+        let fname='Varsha';
+        let lname='Vikraman';
+        document.write("<br><b>Name</b>[Captial Letters]:",fname.toUpperCase()," ",lname.toUpperCase());
+
+        //“You can study anything if you have a will to do it”.Take the substrings “You can study”, “you”,”will”,”do it” and combine as a sentence.
+        let para="You can study anything if you have a will to do it";
+        document.write("<br><br><b>Sentence:</b> ",para);
+        document.write("<br><b>Combine Substrings from the above Sentence</b>:"+para.substring(0,13)+' '+para.substring(26,29)+' '+para.substring(37,41)+' '+para.substring(45,50));
+
+        //“MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation.” Replace MongoDB with Blockchain.
+        let sentence="MongoDB is a decentralised distributed ledger ."
+        document.write("<br><br><b>Sentence:</b> ",sentence);
+        document.write("<br><b>New sentence:</b> ",sentence.replace(/MongoDB/g,"Blockchain"));
+
+        //Print the string “MongoDB is a decentralised distributed ledger” using substring/substr.
+        let text = "MongoDB is a decentralised distributed ledger";
+
+        const part1 = text.substr(0, 7);  
+        const part2 = text.substr(7, 4); 
+        const part3 = text.substr(11, 2);
+        const part4 = text.substr(13, 13); 
+        const part5 = text.substr(26, 12);
+        const part6 = text.substr(38); 
+        const newText = part1 + part2 + part3 + part4 + part5 + part6;
+        document.write("<br><br><b>Sentence:</b> ",text);
+        document.write("<br><b>Printed the string using substr:</b><br> ",newText);
+
+        //Compare “Hello World” & “hEllO World” and display the result & its type.
+        let a="Hello World";
+        let b="hEllO World"
+        
+        const result= a===b;
+        document.write("<br><br><b>Comparing String:</b>", result); 
+        document.write("<br><b>Type of String:</b>", typeof result);
+
+        //Print this statement “ I am ___ yrs of old and my brother is 10 yrs older to me. He is now __ years old.”
+        let age1=15;
+        let age2=age1+10
+        document.write("<br><br><b>Statement:</b>I am ___ yrs of old and my brother is 10 yrs older to me. He is now __ years old.");
+        document.write("<br><b>Complete Statement:</b>"+" I am "+age1+" yrs of old and my brother is 10 yrs older to me. He is now "+age2+" years old.");
+
+        //Consider this statement “ My name is ________.(declaring fname & lastname in uppercase). I live in ____(uppercase).
+        let firstName='Varsha';
+        let lastName='Vikraman';
+        let place="Trivandrum"
+
+        document.write("<br><br><b>Statement:</b>My name is ________.(declaring fname & lastname in uppercase). I live in ____(uppercase).");
+        document.write("<br><b>Complete Statement:</b>"+" My name is "+firstName.toUpperCase()+""+lastName.toUpperCase()+"."+" I live in "+place.toUpperCase()+" .");
+
+        //Consider these two statements “I like to play video games.” “I don’t like Hide & seek”. Change 'like' to 'don't like'.
+        let statement1="I like to play video games.";
+        let statement2="I don't like Hide & seek";
+
+        statement1 = statement1.replace('like', "don't like");
+        statement2 = statement2.replace("don't like", 'like');
+
+        document.write("<br><br><b>Two statements “I like to play video games.” “I don’t like Hide & seek”. Change 'like' to 'don't like'</b>");
+        document.write("<br><b>Statement 1:</b>", statement1);
+        document.write("<br><b>Statement 2:</b> ", statement2);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let k ="Kanyakumari";
+        document.write("element",k[3])
+        document.write(k[4]+k[5]+k[6]+k[7]+k[8]+k[9]+k[10])
+        let m="I like icecream and I like to sleep";
+        document.write("<br> Length of string",m.length)
+        document.write(`<br> Character at position 2 is ${m.charAt(2)}`)
+        document.write("<br>You like what",m.substring(6,15));
+        document.write("<br>You like what",m.slice(6,15));
+        document.write("<br>What else do you like?",m.slice(19))
+        document.write("<br>My string in uppercase",m.toUpperCase())
+        document.write("<br>My string in lowercase",m.toLowerCase())
+        document.write("<br> Icrecream starts at ",m.search(/icecream/g))
+        document.write("<br>New Statement",m.replace(/icecream/g,"burger"))
+        let url ="www.kba.ai";
+        let u = url.split('.');
+        document.write("<br>Without dot ",u)
+
+        let x ='10';
+        let y='20';
+       let j = Number.parseInt(x)
+       document.write("<br> The type of x is ",typeof(j))
+    </script>
+</body>
+</html>
