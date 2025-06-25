@@ -103,7 +103,7 @@
         cakes.appendChild(cake_h)
 
         const option_h=document.createElement('label');
-        option_h.textContent='Select Programming Language : ';
+        option_h.textContent='Choose Your Favourite Cake: ';
         option_h.style.fontWeight = 'bold';
         option_h.style.fontSize = '20px';
         cakes.appendChild(option_h);
@@ -141,16 +141,16 @@
         //Print your full name storing fname & lname. Print in Uppercase.
         let fname='Varsha';
         let lname='Vikraman';
-        document.write("<br><b>Name</b>[Captial Letters]:",fname.toUpperCase()," ",lname.toUpperCase());
+        document.write("<br><br><br><b>Name</b>[Captial Letters]:",fname.toUpperCase()," ",lname.toUpperCase());
 
         //“You can study anything if you have a will to do it”.Take the substrings “You can study”, “you”,”will”,”do it” and combine as a sentence.
         let para="You can study anything if you have a will to do it";
-        document.write("<br><br><b>Sentence:</b> ",para);
+        document.write("<br><br><br><b>Sentence:</b> ",para);
         document.write("<br><b>Combine Substrings from the above Sentence</b>:"+para.substring(0,13)+' '+para.substring(26,29)+' '+para.substring(37,41)+' '+para.substring(45,50));
 
         //“MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation.” Replace MongoDB with Blockchain.
         let sentence="MongoDB is a decentralised distributed ledger ."
-        document.write("<br><br><b>Sentence:</b> ",sentence);
+        document.write("<br><br><br><b>Sentence:</b> ",sentence);
         document.write("<br><b>New sentence:</b> ",sentence.replace(/MongoDB/g,"Blockchain"));
 
         //Print the string “MongoDB is a decentralised distributed ledger” using substring/substr.
@@ -163,7 +163,7 @@
         const part5 = text.substr(26, 12);
         const part6 = text.substr(38); 
         const newText = part1 + part2 + part3 + part4 + part5 + part6;
-        document.write("<br><br><b>Sentence:</b> ",text);
+        document.write("<br><br><br><b>Sentence:</b> ",text);
         document.write("<br><b>Printed the string using substr:</b><br> ",newText);
 
         //Compare “Hello World” & “hEllO World” and display the result & its type.
@@ -171,13 +171,13 @@
         let b="hEllO World"
         
         const result= a===b;
-        document.write("<br><br><b>Comparing String:</b>", result); 
+        document.write("<br><br><br><b>Comparing String:</b>", result); 
         document.write("<br><b>Type of String:</b>", typeof result);
 
         //Print this statement “ I am ___ yrs of old and my brother is 10 yrs older to me. He is now __ years old.”
         let age1=15;
         let age2=age1+10
-        document.write("<br><br><b>Statement:</b>I am ___ yrs of old and my brother is 10 yrs older to me. He is now __ years old.");
+        document.write("<br><br><br><b>Statement:</b>I am ___ yrs of old and my brother is 10 yrs older to me. He is now __ years old.");
         document.write("<br><b>Complete Statement:</b>"+" I am "+age1+" yrs of old and my brother is 10 yrs older to me. He is now "+age2+" years old.");
 
         //Consider this statement “ My name is ________.(declaring fname & lastname in uppercase). I live in ____(uppercase).
@@ -185,7 +185,7 @@
         let lastName='Vikraman';
         let place="Trivandrum"
 
-        document.write("<br><br><b>Statement:</b>My name is ________.(declaring fname & lastname in uppercase). I live in ____(uppercase).");
+        document.write("<br><br><br><b>Statement:</b>My name is ________.(declaring fname & lastname in uppercase). I live in ____(uppercase).");
         document.write("<br><b>Complete Statement:</b>"+" My name is "+firstName.toUpperCase()+""+lastName.toUpperCase()+"."+" I live in "+place.toUpperCase()+" .");
 
         //Consider these two statements “I like to play video games.” “I don’t like Hide & seek”. Change 'like' to 'don't like'.
@@ -195,7 +195,7 @@
         statement1 = statement1.replace('like', "don't like");
         statement2 = statement2.replace("don't like", 'like');
 
-        document.write("<br><br><b>Two statements “I like to play video games.” “I don’t like Hide & seek”. Change 'like' to 'don't like'</b>");
+        document.write("<br><br><br><b>Two statements “I like to play video games.” “I don’t like Hide & seek”. Change 'like' to 'don't like'</b>");
         document.write("<br><b>Statement 1:</b>", statement1);
         document.write("<br><b>Statement 2:</b> ", statement2);
 
