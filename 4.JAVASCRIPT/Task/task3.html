@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    <script>
+        // Program to swap two numbers using a temporary variable
+            let a =10;
+            let b =5;
+            let temp;
+            document.write("Before Swapping a = ",a +" and b = ",b)
+
+            temp =a;
+            a=b;
+            b=temp
+            document.write("<br>After Swapping a = ",a +" and b = ",b)
+        
+        // Program to swap two numbers w/o using temporary variable
+            a=a+b;
+            b=a-b;
+            a=a-b;
+            document.write("<br>After Swapping w/o using temporary variable a = ",a +" and b = ",b)
+
+        // Program to convert Celsius to fahrenheit
+            let C =26;
+            let F = (C*9/5)+32
+            document.write('<br><br>26 degree Celsius = ',F +" degree Fahrenheit");
+
+        // Program to find square of a number
+
+            let d=2;
+            document.write('<br><br>d = ',d)
+            let sq =d*d;
+            document.write('<br>Square of d = ',sq)
+
+        // Program to find cube of a number
+            let cube=d*d*d;
+            document.write('<br>Cube of d = ',cube)
+
+        // Program to find area of square, circle, rectangle, triangle
+            // Area of square
+            let side=5;
+            let S_area=side*side;
+            document.write('<br><br>Area of square of side 4 = ',S_area)
+
+            // Area of circle
+            let radius=4;
+            const pi=3.14
+            let C_area=pi*radius*radius;
+            document.write('<br>Area of circle of radius 4 = ',C_area)
+
+            // Area of rectangle
+            let length=14;
+            let breath=35
+            let R_area=length*breath;
+            document.write('<br>Area of rectangle of length 14 and breath 35 = ',R_area)
+
+            // Area of triangle
+            let base=15;
+            let height=30
+            let T_area=1/2*base*height;
+            document.write('<br>Area of trianglee of base 15 and height 30 = ',T_area)
+
+        // Program to find perimeter of rectangle, square, circle, triangle
+            // Perimeter of square
+            let S_pmtr=4*side;
+            document.write('<br><br>Perimeter of square of side 4 = ',S_pmtr)
+
+            // Area of circle
+            let C_pmtr=2*pi*radius;
+            document.write('<br>Perimeter of circle of radius 4 = ',C_pmtr)
+
+            // Area of rectangle
+            let R_pmtr=(2*length)+(2*breath);
+            document.write('<br>Perimeter of rectangle of length 14 and breath 35 = ',R_pmtr)
+
+            // Area of triangle
+            let a1=15;
+            let a2=30;
+            let a3=18;
+            let T_pmtr=a1+a2+a3;
+            document.write('<br>Perimeter of trianglee of sides 15,30 and 18 = ',T_pmtr)
+
+        // Program to find simple interest & compound interest
+            1000 * 5 * 2
+            let P=1000
+            let R=5
+            let T=2
+            //Simple Interest
+            let SI=(P*R*T)/100;
+            document.write('<br><br>If you borrow Rs.1000 at a 5% simple interest rate for 2 years, Simple Interest = Rs.',SI)
+            //Compound Interest
+            let CI =P*(1+R/100)**T-P;
+            document.write('<br><br>If you invest $1000 at a 5% compound interest rate for 2 years, Compound Interest = Rs.',CI) 
+        
+        // Program to find largest among two numbers
+            let b1=10
+            let b2=32
+            if(b1>b2){
+                document.write(`<br><br>${b1} is largest among ${b1} and ${b2}`)
+            }
+            else{
+                document.write(`<br><br>${b2} is largest ${b1} and ${b2}`)
+            }
+        // program to find smallest among three numbers
+            let b3=21
+            if(b1<b2){
+                if(b1<b3){
+                    document.write(`<br><br>${b1} is smallest among ${b1}, ${b2} and ${b3}`)
+                }
+                else{
+                    document.write(`<br><br>${b3} is smallest among ${b1}, ${b2} and ${b3}`)
+                }
+            }
+            else{
+                if(b2<b3){
+                    document.write(`<br><br>${b2} is smallest among ${b1}, ${b2} and ${b3}`)
+                }
+                else{
+                    document.write(`<br><br>${b3} is smallest among ${b1}, ${b2} and ${b3}`)
+                }
+            }
+        // Program to check the given number is zero,positive and negative
+            let c = 10;
+            if(c==0){
+                document.write('<br><br>c is zero');
+            }else if(c>0){
+                document.write('<br><br>c is a positive number')
+            }else if(c<0){
+                document.write('<br><br>c is a negative number')
+            }else{
+                document.write('<br><br>c is not a number')
+            }
+        // Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.
+            let e = 10;
+            if(e%3==0){
+                document.write('<br><br>e is is a multiple of 3');
+            }else if(e%7==0){
+                document.write('<br><br>c is is a multiple of 7')
+            }else{
+                document.write('<br><br>c is not multiple of 3 or 7')
+            }
+        // Write a JavaScript conditional statement to find the sign of the product of three numbers. Display with the specified sign.
+            let d1 = 10;
+            let d2=-2;
+            let d3=-5;
+            pdt=d1*d2*d3;
+            if(pdt>0){
+                document.write('<br><br>Sign of the product of three numbers <b>Positive</b>');
+            }else if(pdt<0){
+                document.write('<br><br>Sign of the product of three numbers <b>Negative</b>')
+            }else{
+                document.write('<br><br>The product of three numbers is <b>zero</b>')
+            }
+        // Write a program using switch case to check the CGPA on given condition.
+         let CGPA=7;
+         switch(CGPA){
+            case 1:{
+                document.write('<br><br>You got 1 CGPA')
+                break;
+            }
+            case 2:{
+                document.write('<br><br>You got 2 CGPA')
+                break;
+            }
+            case 3:{
+                document.write('<br><br>You got 3 CGPA')
+                break;
+            }
+            case 4:{
+                document.write('<br><br>You got 4 CGPA')
+                break;
+            }
+            case 5:{
+                document.write('<br><br>You got 5 CGPA')
+                break;
+            }
+            case 6:{
+                document.write('<br><br>You got 6 CGPA')
+                break;
+            }
+            case 7:{
+                document.write('<br><br>You got 7 CGPA')
+                break;
+            }
+            case 8:{
+                document.write('<br><br>You got 8 CGPA')
+                break;
+            }
+            case 9:{
+                document.write('<br><br>You got 9 CGPA')
+                break;
+            }
+            case 10:{
+                document.write('<br><br>You got 10 CGPA')
+                break;
+            }
+            default:{
+                document.write('<br><br>CGPA is not in the specified range.')
+            }
+         }
+        // Write a program to print the month name by given number using switch
+            let month=6;
+         switch(month){
+            case 1:{
+                document.write('<br><br>January')
+                break;
+            }
+            case 2:{
+                document.write('<br><br>February')
+                break;
+            }
+            case 3:{
+                document.write('<br><br>March')
+                break;
+            }
+            case 4:{
+                document.write('<br><br>April')
+                break;
+            }
+            case 5:{
+                document.write('<br><br>May')
+                break;
+            }
+            case 6:{
+                document.write('<br><br>June')
+                break;
+            }
+            case 7:{
+                document.write('<br><br>July')
+                break;
+            }
+            case 8:{
+                document.write('<br><br>August')
+                break;
+            }
+            case 9:{
+                document.write('<br><br>September')
+                break;
+            }
+            case 10:{
+                document.write('<br><br>October')
+                break;
+            }
+            case 11:{
+                document.write('<br><br>November')
+                break;
+            }
+            case 12:{
+                document.write('<br><br>December')
+                break;
+            }
+            default:{
+                document.write('<br><br>Invalid number. Please enter a number between 1 and 12.')
+            }
+         }
+        // Write a program to calculate the root of a quadratic equation.
+            let p =1
+            let q =-3
+            let r=-4
+
+            let discriminant= q**2-(4*p*r)
+
+            let x1=(-q+Math.sqrt(discriminant))/(2*p);
+            let x2=(-q-Math.sqrt(discriminant))/(2*p);
+
+            if(d>0){
+                document.write(`<br><br>The roots of a quadratic equation are x1= ${x1} and x2= ${x2}`)
+            }else if(d==0){
+                document.write(`<br><br>The root of a quadratic equation are x1= ${x1} and x2= ${x2}`)
+            }else{
+            document.write('<br><br>No real roots')
+           }
+        /* Write a program to read temperature in centigrade and display a suitable message according to the temperature state below:
+
+            Temp < 0 then Freezing weather
+            Temp 0-10 then Very Cold weather
+            Temp 10-20 then Cold weather
+            Temp 20-30 then Normal in Temp
+            Temp 30-40 then Its Hot
+            Temp >=40 then Its Very Hot*/
+
+            let Temp = 30;
+            if(Temp<0){
+                document.write('<br><br>Temperature:<b> Freezing weather</b>');
+            }else if(Temp >= 0 && Temp <= 10){
+                document.write('<br><br>Temperature:<b> Very Cold weather</b>')
+            }else if(Temp >= 10 && Temp <= 20){
+                document.write('<br><br>Temperature:<b> Cold weather</b>')
+            }else if(Temp >= 20 && Temp <= 30){
+                document.write('<br><br>Temperature:<b> Normal weather</b>')
+            }else if(Temp >= 30 && Temp <= 40){
+                document.write('<br><br>Temperature:<b> Hot weather</b>')
+            }else if (Temp >= 40){
+                document.write('<br><br>Temperature:<b> Very Hot weather</b>')
+            }
+    </script>
+</body>
+</html>
