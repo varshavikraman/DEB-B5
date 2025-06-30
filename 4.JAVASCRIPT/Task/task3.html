@@ -267,12 +267,12 @@
             let x1=(-q+Math.sqrt(discriminant))/(2*p);
             let x2=(-q-Math.sqrt(discriminant))/(2*p);
 
-            if(d>0){
+            if(discriminant>0){
                 document.write(`<br><br>The roots of a quadratic equation are x1= ${x1} and x2= ${x2}`)
-            }else if(d==0){
+            }else if(discriminant==0){
                 document.write(`<br><br>The root of a quadratic equation are x1= ${x1} and x2= ${x2}`)
             }else{
-            document.write('<br><br>No real roots')
+                document.write('<br><br>No real roots')
            }
         /* Write a program to read temperature in centigrade and display a suitable message according to the temperature state below:
 
@@ -297,6 +297,14 @@
             }else if (Temp >= 40){
                 document.write('<br><br>Temperature:<b> Very Hot weather</b>')
             }
+        // Program to find whether the person is eligible for voting using ternary operator
+            let age = 39;
+            (age>=18)?document.write('<br><br>The person is eligible for voting'):document.write('<br><br>The person is not eligible for voting')
+
+        // Write a JavaScript program to compute the sum of the two given integers. If the sum is in the range 50..80 return 65 otherwise return 80 (using ternary operator).
+            let c1=50,c2=25;
+            sum=c1+c2;
+            (sum >=50 && sum<=80)?document.write('<br><br>65'):document.write('<br><br>80')
     </script>
 </body>
 </html>
