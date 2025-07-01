@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+<body>
+    <script>
+        // Write a JS program to print natural numbers from 10 to 50 using while loop . Find the sum & average.
+            let i=10;
+            let sum=0;
+            let count=0;
+            document.write('Natural numbers from 10 to 50 :')
+            while(i<=50){
+                document.write(' ',i+',')
+                i++
+                sum=sum+i;
+                count++
+            }
+            let avg=sum/count;
+            document.write('<br>Sum of natural numbers from 10 to 50 = ',sum);
+            document.write('<br>Average of natural numbers from 10 to 50 = ',avg)
+
+        // Write a JS program to print cube of numbers from 10 to 30
+            i=10
+            document.write('<br><br> Cube of numbers from 10 to 30 :')
+            while(i<=30){
+                let cube =i*i*i;
+                document.write(`<br>Cube of ${i} is ${cube}`)
+                i++
+            }
+        // Write a JS program to print multiplication table for a given number
+            document.write('<br><br> multiplication table for a given number')
+            let n=2
+            for(i=1;i<=10;i++){
+                let mul=i*n;
+                document.write(`<br>${n}X${i}=${mul}`)
+            }
+        
+        //Write a JS program to print the patterns
+            //25,30,35,40,45,50
+            document.write('<br><br><br>')
+            for(i=25;i<=50;i=i+5){
+                document.write(' ',i+',')
+            }
+
+            //10,100,1000,10000
+            document.write('<br><br>')
+            for(i=10;i<=10000;i=i*10){
+                document.write(' ',i+',')
+            }
+
+            //8,10,12,14,16,18,20
+            document.write('<br><br>')
+            for(i=8;i<=20;i=i+2){
+                document.write(' ',i+',')
+            }
+
+        // Write a JS program to check whether the given string is palindrome or not
+            let str = 'anna';
+            let rev_str = '';
+            document.write('<br>')
+            for(let i=str.length-1;i>=0;i--){
+                rev_str += str[i];
+            }
+
+            if(str===rev_str){
+                document.write(`<br>${str} is a palindrome`);
+            }
+            else{
+                document.write(`<br>${str} is not a palindrome`);
+            }
+        
+        // Write a JS program to print reverse of a number
+            let a =963;
+            let rev_a=0;
+            document.write("<br><br>Number =",a);
+            while(a>0){
+                let digit = a%10;
+                rev_a=rev_a*10+digit;
+                a=(a-digit)/10;
+            }
+            document.write("<br><br>Reverse of the number =",rev_a);
+    </script>
+</body>
+</html>
