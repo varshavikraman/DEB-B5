@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a = [2,4,6,8,1]
+        for(i=0;i<=4;i++){
+            document.write('<br>',a[i])
+        }
+
+
+        a = [];
+        b=1;
+        for(i=0;i<=4;i++){
+            a[i]=b;
+            b=b+1
+        }
+        document.write('<br><br> The array a = ');
+        for(i=0;i<=4;i++){
+            document.write(a[i]+",")
+        }
+
+
+        a=[];
+        b=10;
+        for(i=0;i<=4;i++){
+            a[i]=b;
+            b=b+10;
+        }
+         document.write('<br><br> The array a = ');
+        for(i=0;i<=4;i++){
+            document.write(a[i]+",")
+        }
+
+        document.write('<br><br> The array a = ');
+        for(i=0;i<=4;i++){
+            a[i]=a[i]+2
+            document.write(a[i]+", ")
+        }
+
+
+        s=0
+        for(i=0;i<a.length;i++){
+            s=s+a[i]
+    
+        }
+        document.write('<br>sum of array a= ',s)
+
+        // for(x in a) x=index a=array
+        document.write('<br><br> The array a = ');
+        for(x in a){
+            a[x]=a[x]+3
+            document.write(a[x]+", ")
+        }
+        s=0;
+        for(x in a){
+            s=s+a[x]
+        }  
+        document.write('<br>sum of array a= ',s)
+
+        // for(x of a) x=element/variable a=array
+        s=0;
+        for(x of a){
+            s=s+x
+        }  
+        document.write('<br><br>sum of array a= ',s)
+
+        let z=[]
+        for(x of a){
+          z.push(x)  
+        }
+        document.write('<br><br> The array z = ',z)
+    </script>
+</body>
+</html>
