@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <h1>Arrow function Introduction</h1>
+    <p>Open your browser console to see output</p>
+    <script>
+        let add =function(a,b){
+            return a+b;
+        }
+
+        console.log('Regular Function output: ',add(10,20));
+        
+        let addArrow = (a,b)=> a+b;
+
+        console.log('Arrow Function Output :' ,addArrow(30,40));
+        
+        let person = {
+            name:'Anu',
+            age:20,
+            city:'Trivandrum',
+            greet:function(){
+                setTimeout(()=>{
+                console.log('Hello,'+ this.name + ' with age '+this.age);
+                },10000)
+                
+            }
+        }
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.city);
+        person.greet();
+    </script>
+</body>
+</html>
