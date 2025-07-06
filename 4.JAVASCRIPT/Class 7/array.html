@@ -7,13 +7,21 @@
 </head>
 <body>
     <script>
-        let a=[1,2,3];
-        let b=[2,4,6];
-        let result=[];
-        for(i=0;i<3;i++){
-            result=a[i]+b[i];
-            document.write(`result = ${result} `)
+        let a = [1, 2, 3];
+        let b = [2, 4, 6];
+        let result = [];
+
+        document.write(`<br> array a: [${a}]`)
+        document.write(`<br> array b: [${b}]`)
+
+        for (let i = 0; i < a.length; i++) {
+            sum = a[i] + b[i]
+            result.push(sum);
+            //document.write(`result[${i}] = ${result[i]}<br>`);
         }
+
+        document.write(`<br> result array: [${result}]`);
+
     </script>
 </body>
 </html>
