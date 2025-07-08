@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher order fuunctions</title>
+</head>
+<body>
+    <h1>Higher order fuunctions:Check browser Console</h1>
+    <script>
+
+        //map
+        let numbers = [1,2,3,4,5];
+        let double = numbers.map(n=>n*2);
+        console.log(double);
+        const squares = numbers.map((function(num){
+            return num*num
+        }));
+        console.log(squares);
+
+        //filter
+        let even = numbers.filter(n=> n%2 ===0);
+
+        //reduce
+        let sum = numbers.reduce((total,n)=>total+n,0);
+        console.log('sum is: ',sum)
+
+        //fill
+        let array = new Array(5).fill(0);
+        console.log('initialized array: ',array);
+        for(let i=0;i<array.length;i++){
+            array[i]=i+1
+        }
+        console.log('filled array: ',array)
+        
+        
+    </script>
+</body>
+</html>
