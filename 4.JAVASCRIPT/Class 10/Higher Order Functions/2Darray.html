@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D array using Higher-order function</title>
+</head>
+<body>
+    <h1>2D array using Higher-order function: Check Console</h1>
+    <script>
+        // 1. Create a 3x3 2D array filled with zeros
+            let matrix = Array(3).fill().map(() => Array(3).fill(0));
+
+            console.log("Empty matrix:");
+            console.log(matrix);
+
+            let count = 1;
+        // 2. Fill with sequential numbers (1-9)
+            matrix = Array(3).fill().map(() =>
+                Array(3).fill().map(() => count++)
+            );
+
+            console.log("\nFilled with numbers 1-9:");
+            console.log(matrix);
+
+    </script>
+</body>
+</html>
