@@ -106,19 +106,22 @@
         //JS program to read an array and sort in ascending and descending order
             a=[100,3,12,25,6,50,1]
             document.write("<br><br> a =",a)
+
             for (i=0;i<a.length;i++){
                 for(j=i;j<a.length;j++){
-                    if(a[i]<a[j]){
+                    if(a[i]>a[j]){
                         temp=a[i];
                         a[i]=a[j];
                         a[j]=temp;
                     }
                 }
             }
+
             document.write("<br> array a in ascending order = " ,a)
+            
             for (i=0;i<a.length;i++){
                 for(j=i;j<a.length;j++){
-                    if(a[i]>a[j]){
+                    if(a[i]<a[j]){
                         temp=a[i];
                         a[i]=a[j];
                         a[j]=temp;
