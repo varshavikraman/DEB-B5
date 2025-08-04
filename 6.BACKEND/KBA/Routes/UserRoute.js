@@ -1,5 +1,7 @@
 import { Router } from "express";
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+
 
 const router = Router();
 
@@ -12,13 +14,13 @@ router.post('/signup',async(req,res)=>{
     try {
         const { FristName,LastName ,UserName,Password,UserRole } = req.body;
         console.log(FristName);
-        const newPasword = await bcrypt.hash(Password,10) ;
-        console.log(`New Password : ${newPasword}`);
+        const newPassword = await bcrypt.hash(Password,10) ;
+        console.log(`New Password : ${newPassword}`);
         const result = user.get(UserName)
         if (result) {
             res.status(400).json({msg:"Username Already exist"})
         } else {
-            user.set(UserName,{ FristName,LastName ,newPasword,UserRole });
+            user.set(UserName,{ FristName,LastName ,newPassword,UserRole });
             res.status(201).json({msg:"Sucessfully created"})
         }
     } catch (error) {
@@ -34,11 +36,23 @@ router.post('/login',async(req,res)=>{
         if (!result) {
             res.status(404).json({msg:"Username not registered"});
         }
-        const valid = await bcrypt.compare(Password,result.newPasword)
+        const valid = await bcrypt.compare(Password,result.newPassword)
         console.log(valid);
-        //res.status(200).json({msg:'login Sucessfully'})
+
+        if (valid) {
+            const token = jwt.sign({UserName,UserRole:result.UserRole},process.env.SECRET_KEY,{expiresIn:'1h'});
+            console.log('Token:',token);
+            if (token) {
+                res.cookie('authToken',token,{
+                    httpOnly:true
+                })
+                res.status(200).json({msg:'logged in Sucessfully'});
+            } else {
+                res.status(400).json({msg:"something went wrong in token generation"});
+            }
+        }
     } catch (error) {
-        
+        res.status(500).json({error:error.message})
     }
     
 
