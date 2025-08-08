@@ -2,6 +2,7 @@ import { Router } from "express";
 import { course } from "./adminRoute.js";
 import { authenticate } from "../MiddleWare/auth.js";
 
+
 const user = Router();
 const cart = new Map();
 
@@ -46,33 +47,106 @@ user.get('/getCourse/:cName',authenticate, (req, res) => {
 
 user.post('/addToCart', authenticate, (req,res)=>{
     try {
-        const { UserName,CourseName,CourseId,CourseType,Price } = req.body
-        if(course.get(CourseName)){
-            cart.set([UserName,{ CourseName,CourseId,CourseType,Price }])
-            res.status(200).json({msg:'course added to cart successfully'})
+        const UserName = req.name;
+        console.log("Username:",UserName);
+        const {CourseName} = req.body
+        
+        const result = course.get(CourseName)
+    
+        if(result){
+            let userCart = cart.get(UserName);
+            if (!userCart) {
+                userCart = [];
+            }
+            console.log(userCart);
+
+            const isCourseAlreadyInCart = userCart.some(e => 
+                e.CourseName === CourseName
+            );
+            
+            if (isCourseAlreadyInCart) {
+                res.status(401).json({msg:'This course already exists in the cart'});
+            } else {
+                userCart.push({CourseName, Price: result.Price});
+                cart.set(UserName, userCart);
+                console.log("Usercart: ",userCart);
+                res.status(200).json({msg:'Course added to cart successfully'});
+            }
         } else{
             res.status(404).json({msg:'Course not found'})
         }
     } catch (error) {
-        console.error("Error fetching course:", error);
+        console.error("Error:", error);
         res.status(500).json({error: 'Internal Server Error'});
     }
 });
 
-user.get('/getCartDetails',authenticate, (req, res) => {
+user.get('/getCartDetails',authenticate, (req,res) => {
     try {
         const UserName = req.name;
-        const result = cart.get(UserName)
-        if(cart.size === 0){
-            res.status(404).json({msg:'Cart is empty'})
-        } else{
-            console.log(result);
-            
-            res.status(200).json({result})
+        console.log("Username:",UserName);
+        
+        const result = cart.get(UserName);
+        console.log("Cart:", result)
+
+        if (!result) {
+            res.status(404).json({msg:'Cart is empty'});
+        } else {
+            res.status(200).json({cart:result});
         }
     } catch (error) {
-        console.error("Error fetching course:", error);
-        res.status(500).json({error: 'Internal Server Error'});
+        console.error("Error:", error);
+        res.status(500).json({ error: 'Internal Server Error' });
     }
 });
+
+user.post('/buyCourse', authenticate, (req,res) => {
+    try {
+        const UserName = req.name;
+        console.log("Username:", UserName);
+        
+        const userCart = cart.get(UserName);
+
+        if (userCart && userCart.length > 0) {
+            const totalAmount = userCart.reduce((total,course) => total + course.Price, 0);
+            console.log(`Total Amount: ${totalAmount}`);
+
+            res.status(200).json({msg: `Total Amount: ${totalAmount}`});
+        } else {
+            res.status(404).json({msg: 'Cart is empty'});
+        }
+
+    } catch (error) {
+        console.error("Error:", error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+user.delete('/deleteCourseInCart', authenticate, (req,res) => {
+    try {
+        const UserName = req.name;
+        console.log("Username:", UserName);
+
+        const { CourseName } = req.body;
+        const userCart = cart.get(UserName);
+        if (!userCart || userCart.length === 0) {
+            return res.status(404).json({ msg: 'Your cart is empty' });
+        }
+
+        const courseIndex = userCart.findIndex(e => e.CourseName === CourseName);
+        
+        if (courseIndex >= 0) {
+            userCart.splice(courseIndex,1);
+            cart.set(UserName,userCart);
+            
+            res.status(200).json({ msg:'Course deleted successfully from the cart'});
+        } else {
+            res.status(404).json({ msg:'This course is not found in the cart' });
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        res.status(500).json({ error:'Internal Server Error'});
+    }
+});
+
 export default user 

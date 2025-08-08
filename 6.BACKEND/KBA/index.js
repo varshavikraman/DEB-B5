@@ -12,8 +12,9 @@ const app = express();
 
 app.use(json())
 app.use('/',router);
+app.use('/',user);
 app.use('/', authenticate, adminCheck,admin);
-app.use('/',user)
+
 
 
 app.listen(process.env.PORT,()=>{
