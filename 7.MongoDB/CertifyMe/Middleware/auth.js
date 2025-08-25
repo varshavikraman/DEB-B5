@@ -14,7 +14,6 @@ function authenticate(req,res,next) {
             req.name = decode.Name;
             next()
         } else {
-            console.log('hi')
             res.status(401).json({msg:'Unauthorized access'});
         }
     } else {

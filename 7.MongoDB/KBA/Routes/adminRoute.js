@@ -103,7 +103,7 @@ admin.patch('/updateCourse', async(req,res)=>{
             res.status(404).json({msg:'course not found' });
         }
     } catch (error) {
-        console.error("Error fetching course:", error);
+        console.error("Error:", error);
         res.status(500).json({error: 'Internal Server Error'});
     }
 });

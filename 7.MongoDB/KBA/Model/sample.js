@@ -22,4 +22,26 @@ const  demo2 =  new Schema ({
 });
 const course = model('course', demo2)
 
-export {Sample ,course};
+const cartItemSchema = new Schema({
+    course: {
+        type: Schema.Types.ObjectId,
+        ref: 'course', 
+        required: true
+    }
+});
+
+const cartSchema = new Schema({
+    UserName: {
+        type: String,
+        required: true
+    },
+    items: [cartItemSchema],
+    addedAt: {
+        type: Date,
+        default: Date.now
+    }
+});
+
+const Cart = model('cart', cartSchema);
+
+export {Sample ,course, Cart};

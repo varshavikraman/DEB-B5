@@ -68,4 +68,10 @@ router.post('/login',async(req,res)=>{
         res.status(500).json({ msg: "Internal server error" })
     }
 })
+
+router.get('/logout',authenticate,(req,res)=>{
+    res.clearCookie('authToken');
+    res.status(200).json({msg:'Sucessfully Logged out'})
+})
+
 export {router};

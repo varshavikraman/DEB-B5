@@ -54,12 +54,10 @@ router.post('/login',async(req,res)=>{
     } catch (error) {
         res.status(500).json({error:error.message})
     }
-    
+})
+
 router.get('/logout',authenticate,(req,res)=>{
     res.clearCookie('authToken');
     res.status(200).json({msg:'Sucessfully Logged out'})
-})
-
-
 })
 export {router};
